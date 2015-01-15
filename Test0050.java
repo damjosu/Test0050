@@ -41,6 +41,22 @@ public class Test0050
         }    
         return resultado;
     }   
+    
+    /**
+     * Devuelve el resto que da la división de los dos números dados, el primero (dividendo) y el segundo (divisor).
+     */
+    public int modulo(int num1, int num2)
+    {
+        int resultado = 0;
+        if (!(num1 < 0) || !(num2 <0))// Comprueba que no sean negativos.
+        {
+            if ((multiplicacion(num2, division(num1,num2))) != num1) // Si el cociente multiplicado por el divisor, no da el dividendo es que tiene resto.
+            {
+                resultado = (num1 - (multiplicacion(division(num1, num2), num2)));
+            }
+        }
+        return resultado;    
+    }
 
 }
 

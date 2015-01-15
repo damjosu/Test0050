@@ -19,5 +19,28 @@ public class Test0050
         }
         return resultado;
     }
+    
+    /**
+     * Divide dos números dados, el primero (dividendo) y el segundo (divisor), y devuelve el resultado.
+     */
+    public int division(int num1, int num2)
+    {
+        int resultado = 0; 
+        if (!(num1 < 0) || !(num2 <0))// Comprueba que no sean negativos
+        {
+            if (num1 >= num2) //Comprueba que el dividendo sea mayor que el divisor.
+            {   
+                int cont = 0;
+                resultado = num1;          
+                for (cont = 0 ;(resultado - num2) >= 0; cont++) // Mientras que la resta del divisor al dividendo no sea menor que 0 seguirá dentro del bucle.
+                {
+                    resultado -= num2;               
+                }
+                resultado = cont;           
+            }
+        }    
+        return resultado;
+    }   
+
 }
 

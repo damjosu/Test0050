@@ -75,5 +75,25 @@ public class Test0050
         return resultado;        
     }
 
+    /**
+     * Devuelve el resultado de la raiz cuadrada de un número dado.
+     */
+    public int raiz(int num)
+    {
+        int resultado = 0;        
+        int cont = 0;        
+        if (num >= 0) // Comprueba que no sea negativo.
+        {            
+            for (cont = 0; multiplicacion(cont, cont) < num; cont++) {} // Multiplica todos los números por si mismos desde 0 hasta num.
+            resultado = cont;
+        }
+
+        if (multiplicacion(cont, cont) != num) // Comprueba que la raiz sea inexacta.
+        {
+            resultado = -1;
+            System.out.println("Error");
+        }        
+        return resultado;
+    }
 }
 

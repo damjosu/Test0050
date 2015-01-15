@@ -57,6 +57,23 @@ public class Test0050
         }
         return resultado;    
     }
+    
+    /**
+     * Devuelve el resultado de la potencia del primer número dado (base), y segundo dado (exponente).
+     */
+    public int potencia(int num1, int num2)
+    {
+        int resultado = 0;
+        if (!(num1 < 0) || !(num2 <0))// Comprueba que no sean negativos.
+        {
+            resultado = 1;
+            for (int cont = 0; cont < num2; cont++) // Mientras el num1 no se haya multiplicado a si mismo el mismo número de veces que el num2, seguira en el bucle.
+            {
+                resultado = multiplicacion(resultado, num1);
+            }
+        }        
+        return resultado;        
+    }
 
 }
 

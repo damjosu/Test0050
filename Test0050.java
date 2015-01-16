@@ -82,7 +82,7 @@ public class Test0050
     {
         int resultado = 0;        
         int cont = 0;        
-        if (num >= 0) // Comprueba que no sea negativo.
+        if ((num >= 0) && (num < 1000)) // Comprueba que no sea negativo y que no pase de 1000.
         {            
             for (cont = 0; multiplicacion(cont, cont) < num; cont++) {} // Multiplica todos los números por si mismos desde 0 hasta num.
             resultado = cont;
